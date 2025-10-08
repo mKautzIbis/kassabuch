@@ -43,9 +43,7 @@ class Create extends Component
             'date' => $this->date,
         ]);
         Flux::modal('createTransaction')->close();
-        $this->reset();
-
-
+        $this->mount();
         $this->dispatch('transaction_saved');
     }
 

@@ -6,4 +6,5 @@
         </div>
         <livewire:transaction.index />
     </div>
+    <livewire:transaction.edit />
 </x-layouts.app>
