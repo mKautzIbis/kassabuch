@@ -25,7 +25,8 @@
         </flux:sidebar.header>
 
         <flux:sidebar.nav>
-            <flux:sidebar.item icon="arrows-right-left" href="/" current>Transaktionen</flux:sidebar.item>
+            <flux:sidebar.item icon="arrows-right-left" href="{{route('home')}}" current>Transaktionen</flux:sidebar.item>
+            <flux:sidebar.item icon="tag" href="{{route('category_management')}}" current>Kategorienverwaltung</flux:sidebar.item>
             <flux:sidebar.item icon="chart-pie" badge="wop" href="#">Statistken</flux:sidebar.item>
 
         </flux:sidebar.nav>

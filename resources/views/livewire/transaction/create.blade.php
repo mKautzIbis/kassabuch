@@ -11,6 +11,7 @@
                 <flux:radio label="Einzahlung" icon="arrow-trending-down" value="0" />
                 <flux:radio label="Auszahlung" icon="arrow-trending-up" value="1" />
             </flux:radio.group>
+
             <flux:input label="Titel" wire:model="name"/>
             <flux:input label="Datum" type="date" wire:model="date"/>
             <flux:select label="Kategorie" wire:model="category_id" placeholder="Kategorie">

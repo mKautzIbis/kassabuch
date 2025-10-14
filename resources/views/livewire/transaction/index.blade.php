@@ -16,10 +16,16 @@
                 <tr class="text-gray-900 first:font-medium">
                     <td class="px-3 py-2 whitespace-nowrap">{{\Carbon\Carbon::parse($transaction->date)->format('d.m.Y')}}</td>
                     <td class="px-3 py-2 whitespace-nowrap">
-                        <div style="background-color: {{$transaction->category->color}}"
-                             class="px-2 py-1 mx-2 my-1 rounded-full text-center">
-                            {{$transaction->category->name}}
-                        </div>
+                        @if($transaction->category === null)
+                            <div class="px-2 py-1 mx-2 my-1 rounded-full text-center">
+                                Nicht zugewiesen
+                            </div>
+                        @else
+                            <div style="background-color: {{$transaction->category->color}}; filter: brightness(1.2)"
+                                 class="px-2 py-1 mx-2 my-1 rounded-full text-center">
+                                {{$transaction->category->name}}
+                            </div>
+                        @endif
                     </td>
                     <td class="px-3 py-2 whitespace-nowrap">{{$transaction->name}}</td>
                     <td class="px-3 py-2 whitespace-nowrap {{ $transaction->amount < 0 ? 'text-red-600' : 'text-green-600' }}">{{$transaction->amount}}
