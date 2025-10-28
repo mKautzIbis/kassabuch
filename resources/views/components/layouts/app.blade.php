@@ -25,10 +25,9 @@
         </flux:sidebar.header>
 
         <flux:sidebar.nav>
-            <flux:sidebar.item icon="arrows-right-left" href="{{route('home')}}" current>Transaktionen</flux:sidebar.item>
-            <flux:sidebar.item icon="tag" href="{{route('category_management')}}" current>Kategorienverwaltung</flux:sidebar.item>
-            <flux:sidebar.item icon="chart-pie" href="{{route('statistics')}}">Statistken</flux:sidebar.item>
-
+            <flux:sidebar.item icon="arrows-right-left" href="{{route('home')}}" >Transaktionen</flux:sidebar.item>
+            <flux:sidebar.item icon="tag" href="{{route('category_management')}}" >Kategorienverwaltung</flux:sidebar.item>
+            <flux:sidebar.item icon="chart-pie" href="{{route('statistics')}}" >Statistken</flux:sidebar.item>
         </flux:sidebar.nav>
 
         <flux:sidebar.spacer />
