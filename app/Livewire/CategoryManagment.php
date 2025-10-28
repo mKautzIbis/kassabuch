@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Category;
+use App\Models\Transaction;
 use Flux\Flux;
 use Livewire\Component;
 
@@ -83,6 +84,11 @@ class CategoryManagment extends Component
     {
         Flux::modal('deleteModal')->close();
         if(Category::find($this->selected_for_delete)!=null)
+            $transactions=Transaction::where('category_id', $this->selected_for_delete)->get();
+            foreach ($transactions as $transaction){
+                $transaction->category_id = 1;
+                $transaction->save();
+            }
             Category::destroy($this->selected_for_delete);
     }
 

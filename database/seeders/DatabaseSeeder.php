@@ -16,6 +16,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
+        Category::create([
+            'name' => 'nicht definiert',
+            'color' => '#AAAAAA',
+        ]);
         Category::factory(5)->create();
         Transaction::factory(50)->create();
     }

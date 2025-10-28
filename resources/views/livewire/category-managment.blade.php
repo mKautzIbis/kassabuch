@@ -25,8 +25,10 @@
                         <td class="px-3 py-2 whitespace-nowrap w-1/4">{{$category->name}}</td>
                         <td class="px-3 py-2 whitespace-nowrap w-1/4" style="background: {{$category->color}}"></td>
                         <td class="px-3 py-2 whitespace-nowrap">
+                            @if($category->id > 1)
                             <flux:button variant="danger" icon="trash" wire:click="deleteQuestion({{$category->id}})"></flux:button>
                             <flux:button icon="pencil" wire:click="edit({{$category->id}})"></flux:button>
+                            @endif
                         </td>
                     </tr>
                 @endif

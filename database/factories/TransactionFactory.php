@@ -19,7 +19,7 @@ class TransactionFactory extends Factory
         return [
             'name' => fake()->word(),
             'amount' => fake()->randomFloat(2,-1000, 1000),
-            'category_id' => fake()->numberBetween(1, 5),
+            'category_id' => fake()->numberBetween(2, 6),
             'date' => fake()->dateTimeBetween('-1 year', 'now'),
         ];
     }
